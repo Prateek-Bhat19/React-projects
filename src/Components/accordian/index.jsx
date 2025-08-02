@@ -4,7 +4,6 @@ import "./styles.css";
 
 export default function Accordian() {
   const [selected, setSelected] = useState(null);
-  // Changed initial state to false for clarity
   const [enableMultiSelection, setEnableMultiSelection] = useState(false);
   const [multiple, setMultiple] = useState([]);
 
@@ -17,7 +16,7 @@ export default function Accordian() {
     const findIndexOfCurrentId = cpyMultiple.indexOf(getCurrentId);
 
     // Corrected the variable name in the console log
-    console.log(cpyMultiple); 
+    console.log(cpyMultiple);
 
     if (findIndexOfCurrentId === -1) {
       cpyMultiple.push(getCurrentId);
@@ -30,9 +29,11 @@ export default function Accordian() {
 
   return (
     <div className="wrapper">
-      <button onClick={() => setEnableMultiSelection(!enableMultiSelection)}>
+      <button className="acc-wrapper-button" onClick={() => setEnableMultiSelection(!enableMultiSelection)}>
         {/* Changed button text to be more descriptive */}
-        {enableMultiSelection ? "Disable Multi Selection" : "Enable Multi Selection"}
+        {enableMultiSelection
+          ? "Disable Multi Selection"
+          : "Enable Multi Selection"}
       </button>
       <div className="accordian">
         {data && data.length > 0 ? (
