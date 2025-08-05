@@ -18,7 +18,7 @@ const QRCodeGenerator = () => {
       <div>
         <QRCode 
         id="qr-code-value"
-        value={qrCode}
+        value={qrCode} 
         />
       </div>
     </div>
