@@ -11,6 +11,7 @@ import TreeView from "./Components/tree-view";
 import menus from "./Components/tree-view/data";
 import QRCodeGenerator from "./Components/qr-code-generator";
 import LightDarkmode from "./Components/light-dark-mode";
+import ScrollIndicator from "./Components/scroll-indicator";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -28,7 +29,8 @@ function App() {
       {/* <TreeView menus={menus}/> */}
       {/* <QRCodeGenerator /> */}
 
-      <LightDarkmode />
+      {/* <LightDarkmode /> */}
+      <ScrollIndicator url={'https://dummyjson.com/products?limit=100'}/>
     </div>
   );
 }
